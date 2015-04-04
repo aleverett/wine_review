@@ -13,3 +13,10 @@ two:
   winery: MyString
   country: MyString
   varietal: MyString
+
+testwine:
+  name: Good Wine
+  year: 2000
+  winery: Better Winery
+  country: United States
+  varietal: White Zinfandel
