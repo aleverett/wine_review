@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'wines/index'
+  get "/wines" => "wines#index", as: 'wines'
 
-  get 'wines/show'
+  get "/wines/:id" => "wines#show", as: 'wine'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
