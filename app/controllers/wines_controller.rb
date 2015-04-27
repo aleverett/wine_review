@@ -14,7 +14,7 @@ class WinesController < ApplicationController
   def create
     @wine = Wine.new(wine_params)
     if @wine.save
-      redirect_to @wine
+      redirect_to @wine, notice: "#{@wine.name} created!"
     else
       render :new
     end
@@ -25,7 +25,7 @@ class WinesController < ApplicationController
 
   def update
     if @wine.update(wine_params)
-      redirect_to @wine
+      redirect_to @wine, notice: "#{@wine.name} updated!"
     else
       render :new
     end
