@@ -1,9 +1,14 @@
 <h1>Wines</h1>
+
+<p>
+  <%= page_entries_info @wines %>
+</p>
 <ol>
 <% @wines.each do |wine| %>
   <li>"<%= link_to(wine.name, wine) %>" &middot; Winery: <%= wine.winery %> (<%= wine.varietal %>)</li>
 <% end %>
 </ol>
-
-<%= link_to 'Add a New Wine', new_wine_path %>
+<p>
+  <%= paginate @wines %>
+</p>
 
