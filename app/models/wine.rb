@@ -4,4 +4,6 @@ class Wine < ActiveRecord::Base
   validates :name, :year, :country, presence: true
   validates :year, numericality: { only_integer: true }, unless: "year.blank?"
   validates :varietal, inclusion: { in: VARIETALS }
+
+  has_many:log_entries
 end
